@@ -3,66 +3,67 @@ import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 const categories = [
-  { id: "appetizers", name: "Appetizers" },
-  { id: "tandoori", name: "Tandoori Specialties" },
-  { id: "curries", name: "Curries" },
-  { id: "vegetarian", name: "Vegetarian" },
-  { id: "biryanis", name: "Biryanis & Rice" },
+  { id: "breakfast", name: "Breakfast" },
+  { id: "starters", name: "Starters" },
+  { id: "new-arrivals", name: "New Arrivals" },
+  { id: "combos", name: "Combos" },
+  { id: "main-course", name: "Main Course" },
   { id: "breads", name: "Breads" },
-  { id: "desserts", name: "Desserts" },
-  { id: "beverages", name: "Beverages" },
+  { id: "rice-biryani", name: "Rice and Biryani" },
+  { id: "thali", name: "Thali" },
+  { id: "snacks", name: "Snacks" },
+  { id: "chinese", name: "Chinese" },
+  { id: "burgers-sandwiches", name: "Burgers and Sandwiches" },
+  { id: "fried-rice-noodles", name: "Fried Rice and Noodles" },
+  { id: "soups", name: "Soups" },
+  { id: "rolls", name: "Rolls" },
+  { id: "accompaniments", name: "Accompaniments" },
 ];
 
 const menuItems = {
-  appetizers: [
-    { name: "Vegetable Samosa", description: "Crispy pastry filled with spiced potatoes and peas.", price: "$5.99" },
-    { name: "Onion Bhaji", description: "Crispy onion fritters made with chickpea flour and spices.", price: "$5.99" },
-    { name: "Paneer Pakora", description: "Cottage cheese fritters made with chickpea flour and spices.", price: "$6.99" },
-    { name: "Chicken Pakora", description: "Tender chicken fritters made with chickpea flour and spices.", price: "$7.99" },
+  breakfast: [
+    { name: "Pudina Paratha", description: "Fresh mint flavored paratha, a perfect way to start your day.", price: "₹70" },
+    { name: "Mixed Pakoda", description: "Assorted vegetables dipped in chickpea flour batter and deep fried.", price: "₹150" },
   ],
-  tandoori: [
-    { name: "Tandoori Chicken", description: "Chicken marinated in yogurt and spices, roasted in a tandoor.", price: "$14.99" },
-    { name: "Chicken Tikka", description: "Boneless chicken pieces marinated in yogurt and spices, roasted in a tandoor.", price: "$15.99" },
-    { name: "Seekh Kebab", description: "Minced lamb mixed with herbs and spices, roasted in a tandoor.", price: "$16.99" },
-    { name: "Tandoori Shrimp", description: "Jumbo shrimp marinated in yogurt and spices, roasted in a tandoor.", price: "$18.99" },
+  starters: [
+    { name: "Paneer Tikka", description: "Paneer tikka is an Indian dish made from chunks of paneer marinated in spices and grilled in a tandoor.", price: "₹280" },
+    { name: "Paneer Achari Tikka", description: "Paneer tikka is an Indian dish made from chunks of paneer marinated in pickling spices and grilled in a tandoor.", price: "₹320" },
+    { name: "Chaap Tikka", description: "Marinated soya chaap grilled to perfection in the tandoor.", price: "₹250" },
   ],
-  curries: [
-    { name: "Butter Chicken", description: "Tender chicken cooked in a rich and creamy tomato sauce with aromatic spices.", price: "$16.99" },
-    { name: "Chicken Tikka Masala", description: "Grilled chicken pieces in a creamy tomato sauce with aromatic spices.", price: "$16.99" },
-    { name: "Lamb Rogan Josh", description: "Tender lamb cooked with aromatic spices in a rich and flavorful sauce.", price: "$18.99" },
-    { name: "Goan Fish Curry", description: "Fish cooked in a tangy coconut sauce with spices.", price: "$17.99" },
-  ],
-  vegetarian: [
-    { name: "Paneer Tikka Masala", description: "Grilled cottage cheese cubes in a creamy tomato sauce with aromatic spices.", price: "$15.99" },
-    { name: "Dal Makhani", description: "Black lentils cooked with butter and cream in a rich and flavorful sauce.", price: "$13.99" },
-    { name: "Chana Masala", description: "Chickpeas cooked with onions, tomatoes, and spices.", price: "$13.99" },
-    { name: "Aloo Gobi", description: "Potatoes and cauliflower cooked with onions, tomatoes, and spices.", price: "$13.99" },
-  ],
-  biryanis: [
-    { name: "Vegetable Biryani", description: "Fragrant basmati rice cooked with mixed vegetables and aromatic spices.", price: "$14.99" },
-    { name: "Chicken Biryani", description: "Fragrant basmati rice cooked with chicken and aromatic spices.", price: "$16.99" },
-    { name: "Lamb Biryani", description: "Fragrant basmati rice cooked with lamb and aromatic spices.", price: "$18.99" },
-    { name: "Shrimp Biryani", description: "Fragrant basmati rice cooked with shrimp and aromatic spices.", price: "$19.99" },
+  "main-course": [
+    { name: "Jeera Aloo", description: "Potatoes tempered with cumin seeds and spices.", price: "₹160", category: "Aloo Main Course" },
+    { name: "Aloo Achari", description: "Potatoes cooked with pickling spices for a tangy flavor.", price: "₹160", category: "Aloo Main Course" },
+    { name: "Aloo Capsicum Dry", description: "Stir-fried potatoes and capsicum with aromatic spices.", price: "₹180", category: "Aloo Main Course" },
+    { name: "Aloo Do Pyaza", description: "Potatoes cooked with layers of onions and spices.", price: "₹180", category: "Aloo Main Course" },
+    { name: "Dum Aloo Kashmiri", description: "Baby potatoes in a rich, slightly sweet gravy.", price: "₹220", category: "Aloo Main Course" },
+    { name: "Matar Mushroom Gravy", description: "Green peas and mushrooms cooked in a flavorful gravy.", price: "₹240", category: "Mushroom Main Course" },
+    { name: "Kadai Mushroom Gravy", description: "Mushrooms cooked with bell peppers in a spicy kadai masala.", price: "₹260", category: "Mushroom Main Course" },
+    { name: "Dal Makhani", description: "The typical vegetables included in mixed vegetable are cauliflower, carrots, cabbage, french beans.", price: "₹190", category: "Dal", bestseller: true },
+    { name: "Yellow Dal Tadka", description: "The literal translation of dal tadka is dal lentil and tadka tempering.", price: "₹180", category: "Dal" },
+    { name: "Shahi Paneer", description: "Shahi paneer recipe delicious, rich and creamy restaurant style shahi paneer.", price: "₹240", category: "Paneer Main Course", bestseller: true },
+    { name: "Kadai Paneer", description: "Kadai paneer is a spicy, warming, flavorful and super delicious dish made by cooking paneer in a fragrant gravy.", price: "₹280", category: "Paneer Main Course", bestseller: true, spicy: true },
+    { name: "Paneer Butter Masala", description: "Punjabi paneer butter masala is one of the most popular paneer recipes in Indian cuisine.", price: "₹260", category: "Paneer Main Course", bestseller: true },
   ],
   breads: [
-    { name: "Naan", description: "Leavened bread baked in a tandoor.", price: "$3.99" },
-    { name: "Garlic Naan", description: "Leavened bread topped with garlic and baked in a tandoor.", price: "$4.99" },
-    { name: "Roti", description: "Whole wheat bread baked in a tandoor.", price: "$3.99" },
-    { name: "Paratha", description: "Layered whole wheat bread baked in a tandoor.", price: "$4.99" },
+    { name: "Tandoori Roti", description: "Soft thin refined and whole wheat flour rotis that are served folded like a handkerchief.", price: "₹20", category: "Roti" },
+    { name: "Tandoori Butter Roti", description: "Indian flat bread baked on a tawa, topped with butter.", price: "₹25", category: "Roti" },
+    { name: "Naan", description: "Leavened bread baked in a tandoor.", price: "₹50", category: "Naan" },
+    { name: "Butter Naan", description: "Indian bread baked in Indian clay oven with a touch of butter.", price: "₹60", category: "Naan" },
+    { name: "Lachha Paratha", description: "Layered flaky flatbread.", price: "₹50", category: "Paratha" },
+    { name: "Pudina Paratha", description: "Flatbread infused with fresh mint.", price: "₹70", category: "Paratha" },
   ],
-  desserts: [
-    { name: "Gulab Jamun", description: "Deep-fried milk solid balls soaked in sugar syrup.", price: "$5.99" },
-    { name: "Kheer", description: "Rice pudding made with milk, rice, and sugar, flavored with cardamom and garnished with nuts.", price: "$5.99" },
-    { name: "Kulfi", description: "Indian ice cream made with milk, sugar, and flavored with cardamom and nuts.", price: "$5.99" },
-    { name: "Gajar Halwa", description: "Carrot pudding made with carrots, milk, sugar, and ghee, garnished with nuts.", price: "$5.99" },
+  "rice-biryani": [
+    { name: "Plain Rice", description: "Steamed basmati rice.", price: "₹120" },
+    { name: "Jeera Rice", description: "Basmati rice tempered with cumin seeds.", price: "₹130" },
+    { name: "Veg Biryani", description: "A classic dish made by layering rice over slow cooked mixed veg gravy.", price: "₹220" },
   ],
-  beverages: [
-    { name: "Mango Lassi", description: "Refreshing yogurt drink flavored with mango.", price: "$4.99" },
-    { name: "Sweet Lassi", description: "Refreshing yogurt drink flavored with rose water and cardamom.", price: "$4.99" },
-    { name: "Masala Chai", description: "Spiced tea made with milk and a blend of spices.", price: "$3.99" },
-    { name: "Indian Coffee", description: "Strong coffee made with milk and sugar.", price: "$3.99" },
+  thali: [
+    { name: "Thali", description: "Dal Tadka+Matar Paneer+Rice+2 Butter Roti+Raita+Salad [Subject to Availability]", price: "₹249" },
+    { name: "Special Thali", description: "Dal Makhani+Shahi Paneer+Mixed Veg+1 Butter Naan+1 Laccha Paratha+Salad+Raita+Rice+Gulab Jamun [1 Piece] [Subject to Availability]", price: "₹299", bestseller: true },
   ],
 };
 
@@ -122,29 +123,97 @@ const Menu = () => {
         {/* Menu Sections */}
         <div className="bg-white py-12">
           <div className="container mx-auto px-4">
-            {categories.map((category) => (
-              <div key={category.id} id={category.id} className="mb-16 scroll-mt-28">
-                <h2 className="text-3xl font-playfair font-bold text-indiancharcoal mb-8 text-center">
-                  {category.name}
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {menuItems[category.id as keyof typeof menuItems].map((item, index) => (
-                    <div key={index} className="border border-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                      <div className="flex justify-between items-start">
-                        <h3 className="text-xl font-playfair font-semibold text-indiancharcoal">{item.name}</h3>
-                        <span className="text-indianred font-semibold">{item.price}</span>
+            {/* Featured categories section */}
+            {Object.keys(menuItems).map((categoryKey) => {
+              const categoryName = categories.find(cat => cat.id === categoryKey)?.name;
+              const items = menuItems[categoryKey as keyof typeof menuItems];
+              
+              if (!items || items.length === 0) return null;
+              
+              // Group by subcategory if present
+              const subcategories: Record<string, any[]> = {};
+              items.forEach(item => {
+                const subcategory = item.category || 'default';
+                if (!subcategories[subcategory]) {
+                  subcategories[subcategory] = [];
+                }
+                subcategories[subcategory].push(item);
+              });
+              
+              return (
+                <div key={categoryKey} id={categoryKey} className="mb-16 scroll-mt-28">
+                  <h2 className="text-3xl font-playfair font-bold text-indiancharcoal mb-8 text-center">
+                    {categoryName}
+                  </h2>
+                  
+                  {Object.keys(subcategories).length > 1 ? (
+                    // Display with subcategories
+                    Object.entries(subcategories).map(([subcatName, subcatItems]) => (
+                      <div key={subcatName} className="mb-10">
+                        {subcatName !== 'default' && (
+                          <h3 className="text-xl font-playfair font-semibold text-indianred mb-4 border-b border-indiangold/30 pb-2">
+                            {subcatName}
+                          </h3>
+                        )}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          {subcatItems.map((item, index) => (
+                            <div key={index} className="border border-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                              <div className="flex justify-between items-start">
+                                <h3 className="text-xl font-playfair font-semibold text-indiancharcoal flex items-center">
+                                  {item.name}
+                                  {item.bestseller && (
+                                    <span className="ml-2 text-xs bg-indiangold text-white px-2 py-0.5 rounded-full">Bestseller</span>
+                                  )}
+                                  {item.spicy && (
+                                    <span className="ml-2 text-xs bg-indianred text-white px-2 py-0.5 rounded-full">Spicy</span>
+                                  )}
+                                </h3>
+                                <span className="text-indianred font-semibold">{item.price}</span>
+                              </div>
+                              <p className="text-gray-600 mt-2">{item.description}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
+                    ))
+                  ) : (
+                    // Display without subcategories
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {items.map((item, index) => (
+                        <div key={index} className="border border-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                          <div className="flex justify-between items-start">
+                            <h3 className="text-xl font-playfair font-semibold text-indiancharcoal flex items-center">
+                              {item.name}
+                              {item.bestseller && (
+                                <span className="ml-2 text-xs bg-indiangold text-white px-2 py-0.5 rounded-full">Bestseller</span>
+                              )}
+                              {item.spicy && (
+                                <span className="ml-2 text-xs bg-indianred text-white px-2 py-0.5 rounded-full">Spicy</span>
+                              )}
+                            </h3>
+                            <span className="text-indianred font-semibold">{item.price}</span>
+                          </div>
+                          <p className="text-gray-600 mt-2">{item.description}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
-            <div className="text-center mt-12">
-              <Button className="bg-indianred hover:bg-indianred/90 text-white">
-                Download PDF Menu
-              </Button>
+            <div className="text-center mt-12 space-y-4">
+              <p className="text-gray-600">This is just a sample of our extensive menu. For our complete menu and online ordering:</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button className="bg-indianred hover:bg-indianred/90 text-white">
+                  Download PDF Menu
+                </Button>
+                <Link to="/order-online">
+                  <Button className="bg-indiangold hover:bg-indiangold/90 text-white">
+                    Order Online <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

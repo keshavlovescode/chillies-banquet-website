@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Utensils, ChefHat, Menu, X } from "lucide-react";
+import { Utensils, ChefHat, Menu, X, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -20,12 +20,15 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Home</Link>
           <Link to="/menu" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Menu</Link>
           <Link to="/banquet" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Banquet Hall</Link>
           <Link to="/about" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">About</Link>
           <Link to="/contact" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Contact</Link>
+          <Link to="/order-online" className="font-medium text-indiancharcoal hover:text-indianred transition-colors flex items-center">
+            <ShoppingCart className="mr-1 h-4 w-4" /> Order Online
+          </Link>
           <Button className="bg-indianred hover:bg-indianred/90 text-white">
             <Utensils className="mr-2 h-4 w-4" /> Reservations
           </Button>
@@ -84,6 +87,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
+            </Link>
+            <Link 
+              to="/order-online" 
+              className="py-3 font-medium text-indiancharcoal hover:text-indianred transition-colors flex items-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <ShoppingCart className="mr-1 h-4 w-4" /> Order Online
             </Link>
             <Button 
               className="mt-4 bg-indianred hover:bg-indianred/90 text-white w-full"

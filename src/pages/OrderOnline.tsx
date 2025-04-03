@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,14 +7,25 @@ import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 
+type MenuItem = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  description?: string;
+  category?: string;
+  isNew?: boolean;
+  isBestseller?: boolean;
+  isSpicy?: boolean;
+};
+
 const OrderOnline = () => {
   useEffect(() => {
-    // Scroll to top when page loads
     window.scrollTo(0, 0);
   }, []);
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [cartItems, setCartItems] = useState<any[]>([]);
+  const [cartItems, setCartItems] = useState<MenuItem[]>([]);
 
   const menuCategories = [
     { id: "breakfast", name: "Breakfast", count: 2 },
@@ -35,10 +45,10 @@ const OrderOnline = () => {
     { id: "accompaniments", name: "Accompaniments", count: 13 },
   ];
 
-  const menuItems = {
+  const menuItems: Record<string, MenuItem[]> = {
     breakfast: [
-      { id: 1, name: "Pudina Paratha", price: 70, image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
-      { id: 2, name: "Mixed Pakoda", price: 150, image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
+      { id: 1, name: "Pudina Paratha", price: 70, image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3", description: "Fresh mint flavored paratha, a perfect way to start your day." },
+      { id: 2, name: "Mixed Pakoda", price: 150, image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3", description: "Assorted vegetables dipped in chickpea flour batter and deep fried." },
     ],
     starters: [
       { 
@@ -55,7 +65,13 @@ const OrderOnline = () => {
         image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
         description: "Paneer tikka is an Indian dish made from chunks of paneer marinated in pickling spices and grilled in a tandoor."
       },
-      { id: 5, name: "Chaap Tikka", price: 250, image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
+      { 
+        id: 5, 
+        name: "Chaap Tikka", 
+        price: 250, 
+        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
+        description: "Marinated soya chaap grilled to perfection in the tandoor."
+      },
     ],
     "new-arrivals": [
       { 
@@ -113,14 +129,16 @@ const OrderOnline = () => {
         name: "Jeera Aloo", 
         price: 160, 
         image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
-        category: "Aloo Main Course"
+        category: "Aloo Main Course",
+        description: "Potatoes tempered with cumin seeds and spices."
       },
       { 
         id: 13, 
         name: "Aloo Achari", 
         price: 160, 
         image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
-        category: "Aloo Main Course"
+        category: "Aloo Main Course",
+        description: "Potatoes cooked with pickling spices for a tangy flavor."
       },
       { 
         id: 14, 
@@ -181,7 +199,7 @@ const OrderOnline = () => {
   const filteredMenuItems = () => {
     if (!searchTerm) return null;
     
-    const results: any[] = [];
+    const results: MenuItem[] = [];
     
     Object.keys(menuItems).forEach(category => {
       const items = menuItems[category as keyof typeof menuItems].filter(item => 
@@ -197,11 +215,11 @@ const OrderOnline = () => {
     return results;
   };
 
-  const addToCart = (item: any) => {
+  const addToCart = (item: MenuItem) => {
     setCartItems([...cartItems, item]);
   };
 
-  const renderMenuItem = (item: any) => (
+  const renderMenuItem = (item: MenuItem) => (
     <div key={item.id} className="border border-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
       <div className="flex justify-between">
         <div className="flex-1">

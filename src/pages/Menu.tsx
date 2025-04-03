@@ -24,7 +24,17 @@ const categories = [
   { id: "accompaniments", name: "Accompaniments" },
 ];
 
-const menuItems = {
+// Define a proper type for menu items
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+  category?: string;
+  bestseller?: boolean;
+  spicy?: boolean;
+};
+
+const menuItems: Record<string, MenuItem[]> = {
   breakfast: [
     { name: "Pudina Paratha", description: "Fresh mint flavored paratha, a perfect way to start your day.", price: "₹70" },
     { name: "Mixed Pakoda", description: "Assorted vegetables dipped in chickpea flour batter and deep fried.", price: "₹150" },

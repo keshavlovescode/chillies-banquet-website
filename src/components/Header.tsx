@@ -15,7 +15,7 @@ const Header = () => {
           <ChefHat className="h-8 w-8 text-indianred" />
           <div>
             <h1 className="font-playfair text-2xl font-bold text-indianred">Indian Chillies</h1>
-            <p className="text-xs text-indiancharcoal/70 -mt-1">Restaurant & Banquet Hall</p>
+            <p className="text-xs text-indiancharcoal/70 -mt-1">Restaurant & Banquet Hall · FSSAI: 22721106000072</p>
           </div>
         </Link>
 

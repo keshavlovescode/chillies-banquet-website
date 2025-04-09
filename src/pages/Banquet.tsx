@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Calendar, Cake, Bell, Utensils, Users, Music, Image } from "lucide-react";
+import { Calendar, Cake, Bell, Utensils, Users, Music, Image, PartyPopper } from "lucide-react";
 
 const features = [
   {
@@ -33,9 +33,9 @@ const features = [
     description: "Our spacious banquet hall can comfortably accommodate up to 200 guests.",
   },
   {
-    icon: <Music className="h-10 w-10 text-indiangold" />,
-    title: "Audio/Visual Equipment",
-    description: "State-of-the-art sound system, projector, and screen available for your use.",
+    icon: <PartyPopper className="h-10 w-10 text-indiangold" />,
+    title: "Decoration Services",
+    description: "We offer beautiful decoration packages for all types of events.",
   },
 ];
 
@@ -43,32 +43,32 @@ const events = [
   {
     title: "Weddings",
     description: "Transform our elegant banquet hall into the wedding venue of your dreams. Our team will help coordinate every detail, from the menu to the decorations, ensuring your special day is truly memorable.",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "/lovable-uploads/e6a9c621-d0e1-448e-ae17-c4267883ad53.png",
   },
   {
-    title: "Corporate Events",
+    title: "Corporate",
     description: "Host your next corporate event, meeting, or conference in our sophisticated banquet hall. With our professional staff and amenities, your business event will be both productive and impressive.",
-    image: "https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "/lovable-uploads/f3b87dd9-18cf-4024-95a3-94d14acd0d1d.png",
   },
   {
-    title: "Social Gatherings",
-    description: "Celebrate life's special moments in our beautiful banquet hall. Whether it's a birthday, anniversary, or holiday party, we'll help create an unforgettable experience for you and your guests.",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3",
+    title: "Birthdays",
+    description: "Celebrate your special day with us! Our banquet hall provides the perfect setting for birthday celebrations of all sizes, with customizable decoration and catering options.",
+    image: "/lovable-uploads/d8d9a203-c06f-4061-a0c3-d93decc64208.png",
   },
   {
-    title: "Cultural Celebrations",
-    description: "Honor your cultural traditions with a celebration in our banquet hall. Our team understands the importance of cultural details and will work closely with you to ensure they are respected and highlighted.",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3",
+    title: "Kitty",
+    description: "Our banquet hall is ideal for kitty parties with friends. Enjoy a relaxed atmosphere with delicious food and attentive service for a memorable gathering.",
+    image: "/lovable-uploads/e35077d2-f8b8-415d-9635-86d739be28f6.png",
   },
 ];
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1577784424946-e12c7135f5a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
-  "https://images.unsplash.com/photo-1470784790053-6c2f15489967?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3",
+  "/lovable-uploads/f3b87dd9-18cf-4024-95a3-94d14acd0d1d.png",
+  "/lovable-uploads/e6a9c621-d0e1-448e-ae17-c4267883ad53.png",
+  "/lovable-uploads/d8d9a203-c06f-4061-a0c3-d93decc64208.png",
+  "/lovable-uploads/989568fa-9844-47a0-8c29-e9d57129717e.png",
+  "/lovable-uploads/d467db32-2a71-42c3-904d-376c7454bb46.png",
+  "/lovable-uploads/e35077d2-f8b8-415d-9635-86d739be28f6.png",
 ];
 
 const Banquet = () => {
@@ -87,7 +87,7 @@ const Banquet = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3')", 
+              backgroundImage: "url('/lovable-uploads/f3b87dd9-18cf-4024-95a3-94d14acd0d1d.png')", 
               filter: "brightness(0.3)"
             }}
           ></div>
@@ -113,7 +113,7 @@ const Banquet = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-playfair font-bold text-indiancharcoal mb-4">
-                  Elegant Venue for <span className="text-indianred">Special Occasions</span>
+                  Fully Equipped <span className="text-indianred">Banquet Hall</span>
                 </h2>
                 <div className="w-20 h-1 bg-indiangold mb-6"></div>
                 <p className="text-gray-700 mb-4">
@@ -133,7 +133,7 @@ const Banquet = () => {
                     Book the Venue
                   </Button>
                   <Button variant="outline" className="border-indiancharcoal text-indiancharcoal hover:bg-indiancharcoal/10">
-                    Download Brochure
+                    Call for Details
                   </Button>
                 </div>
               </div>
@@ -141,22 +141,22 @@ const Banquet = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                    src="/lovable-uploads/f3b87dd9-18cf-4024-95a3-94d14acd0d1d.png" 
                     alt="Banquet Hall" 
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
                 </div>
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                    alt="Table Setting" 
+                    src="/lovable-uploads/d467db32-2a71-42c3-904d-376c7454bb46.png" 
+                    alt="Banquet Interior" 
                     className="w-full h-48 object-cover rounded-lg shadow-lg"
                   />
                 </div>
                 <div>
                   <img 
-                    src="https://images.unsplash.com/photo-1577784424946-e12c7135f5a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                    alt="Decoration" 
+                    src="/lovable-uploads/d8d9a203-c06f-4061-a0c3-d93decc64208.png" 
+                    alt="Hall Decoration" 
                     className="w-full h-48 object-cover rounded-lg shadow-lg"
                   />
                 </div>
@@ -203,15 +203,15 @@ const Banquet = () => {
               </p>
             </div>
 
-            <Tabs defaultValue="weddings" className="w-full">
+            <Tabs defaultValue="Weddings" className="w-full">
               <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
-                <TabsTrigger value="weddings">Weddings</TabsTrigger>
-                <TabsTrigger value="corporate">Corporate</TabsTrigger>
-                <TabsTrigger value="social">Social</TabsTrigger>
-                <TabsTrigger value="cultural">Cultural</TabsTrigger>
+                <TabsTrigger value="Weddings">Weddings</TabsTrigger>
+                <TabsTrigger value="Corporate">Corporate</TabsTrigger>
+                <TabsTrigger value="Birthdays">Birthdays</TabsTrigger>
+                <TabsTrigger value="Kitty">Kitty Parties</TabsTrigger>
               </TabsList>
               {events.map((event, index) => (
-                <TabsContent key={index} value={event.title.toLowerCase()}>
+                <TabsContent key={index} value={event.title}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                       <img 
@@ -275,7 +275,7 @@ const Banquet = () => {
                 Ready to Book Our <span className="text-indiangold">Banquet Hall</span>?
               </h2>
               <p className="text-white/80 mb-8">
-                Contact us today to check availability and discuss your event requirements.
+                Contact us today at <span className="text-indiangold">+91 999-776-1232</span> to check availability and discuss your event requirements.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button className="bg-indianred hover:bg-indianred/90 text-white">

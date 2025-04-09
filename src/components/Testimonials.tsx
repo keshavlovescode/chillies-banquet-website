@@ -3,16 +3,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Wedding Reception",
-    quote: "Indian Chillies made our wedding reception truly special. The banquet hall was beautifully decorated, and the food was exceptional. All our guests were impressed!",
-    avatar: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Sandeep Kumar",
+    role: "Recent Guest",
+    quote: "Awesome location, spacious, well service, awesome looking fully air conditioned.",
+    avatar: "/lovable-uploads/be746985-9516-4618-a195-4c78cfa36f65.png",
   },
   {
-    name: "Michael Chen",
-    role: "Regular Customer",
-    quote: "The best Indian food in town, hands down! I've been coming here for years and the quality and taste have always been consistently excellent.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Rohit Sharma",
+    role: "Event Host",
+    quote: "Very good place for family function or individual gathering.. very nice staff and food quality",
+    avatar: "/lovable-uploads/5e874262-3d39-48fc-b13d-fc80368a5c02.png",
   },
   {
     name: "Priya Patel",
@@ -41,12 +41,22 @@ const Testimonials = () => {
             <Card key={index} className="border-none shadow-lg">
               <CardContent className="p-8">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-indiangold">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name} 
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-full mb-4">
+                    {index < 2 ? (
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name} 
+                        className="w-full h-auto object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-indiangold mx-auto">
+                        <img 
+                          src={testimonial.avatar} 
+                          alt={testimonial.name} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
                   </div>
                   <div className="mb-4">
                     {[...Array(5)].map((_, i) => (

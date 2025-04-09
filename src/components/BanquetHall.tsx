@@ -40,22 +40,22 @@ const BanquetHall = () => {
           <div className="lg:col-span-3 grid grid-cols-2 gap-4">
             <div className="col-span-2">
               <img 
-                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                src="/lovable-uploads/f3b87dd9-18cf-4024-95a3-94d14acd0d1d.png" 
                 alt="Banquet Hall" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                alt="Table Setting" 
+                src="/lovable-uploads/e6a9c621-d0e1-448e-ae17-c4267883ad53.png" 
+                alt="Banquet Setup for Weddings" 
                 className="w-full h-60 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1577784424946-e12c7135f5a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                alt="Decoration" 
+                src="/lovable-uploads/d8d9a203-c06f-4061-a0c3-d93decc64208.png" 
+                alt="Hall Decoration" 
                 className="w-full h-60 object-cover rounded-lg shadow-lg"
               />
             </div>

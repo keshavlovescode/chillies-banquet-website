@@ -28,7 +28,7 @@ const Contact = () => {
                   <MapPin className="mr-3 h-5 w-5 text-indianred shrink-0 mt-1" />
                   <div>
                     <h4 className="font-medium text-indiancharcoal">Our Location</h4>
-                    <p className="text-gray-600">Near Sikhera Road, Opposite Umesh Park, Modinagar Locality, Modinagar, Uttar Pradesh</p>
+                    <p className="text-gray-600">Near Sikhera Road, Delhi-Meerut Road, Opposite Umesh Park, Modinagar, Uttar Pradesh 201204</p>
                   </div>
                 </div>
                 
@@ -37,7 +37,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-indiancharcoal">Phone Number</h4>
                     <p className="text-gray-600">
-                      <a href="tel:+919997761232" className="hover:text-indianred transition-colors">+91 9997761232</a>
+                      <a href="tel:+919997761232" className="hover:text-indianred transition-colors">+91 999-776-1232</a>
                     </p>
                   </div>
                 </div>
@@ -64,10 +64,15 @@ const Contact = () => {
           </div>
           
           <div>
+            <img 
+              src="/lovable-uploads/8ee8f53d-d6a3-46b0-bfc2-cafc185ba919.png" 
+              alt="Indian Chillies Restaurant Front" 
+              className="rounded-lg shadow-md mb-4 w-full h-auto"
+            />
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.4408283402743!2d77.57290047548614!3d28.834376775583854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c63a8a02d2831%3A0x7dfd8be2c6ede9f1!2sIndian%20Chillies%20Restaurant!5e0!3m2!1sen!2sin!4v1712338800456!5m2!1sen!2sin" 
               width="100%" 
-              height="400" 
+              height="200" 
               style={{ border: 0 }} 
               allowFullScreen 
               loading="lazy" 

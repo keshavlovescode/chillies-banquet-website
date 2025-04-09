@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Utensils, Menu, X, ShoppingCart } from "lucide-react";
+import { Utensils, Menu, X, ShoppingCart, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -27,7 +27,13 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Home</Link>
           <Link to="/menu" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Menu</Link>
-          <Link to="/banquet" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Banquet Hall</Link>
+          <Link to="/banquet" className="font-medium text-indiancharcoal hover:text-indianred transition-colors relative group">
+            <span className="flex items-center">
+              <Building2 className="mr-1 h-4 w-4 text-indiangold" /> 
+              Banquet Hall
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indiangold transition-all duration-300 group-hover:w-full"></span>
+            </span>
+          </Link>
           <Link to="/about" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">About</Link>
           <Link to="/contact" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Contact</Link>
           <Link to="/order-online" className="font-medium text-indiancharcoal hover:text-indianred transition-colors flex items-center">
@@ -73,10 +79,10 @@ const Header = () => {
             </Link>
             <Link 
               to="/banquet" 
-              className="py-3 font-medium text-indiancharcoal hover:text-indianred transition-colors"
+              className="py-3 font-medium text-indianbrown flex items-center banquet-highlight px-3 my-1"
               onClick={() => setIsMenuOpen(false)}
             >
-              Banquet Hall
+              <Building2 className="mr-2 h-5 w-5 text-indiangold" /> Banquet Hall
             </Link>
             <Link 
               to="/about" 

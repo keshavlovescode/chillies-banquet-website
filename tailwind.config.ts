@@ -63,12 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Indian Chillies
-				indianred: '#B71C1C',
-				indiangold: '#D4AF37',
-				indianorange: '#FF5722',
+				// Updated custom colors for Indian Chillies to match logo
+				indianred: '#B40E10', // Deeper red from logo
+				indiangold: '#CD7B2F', // Golden-orange from logo
+				indianorange: '#E85A0C',
 				indiancream: '#FFF8E1',
-				indiancharcoal: '#212121',
+				indiancharcoal: '#211003', // Darker brown from logo
+				indianbrown: '#5E2C0A', // Medium brown from logo
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

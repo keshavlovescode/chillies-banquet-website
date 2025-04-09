@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const menuItems = [
@@ -43,7 +43,7 @@ const MenuHighlights = () => {
             Our Signature <span className="text-indianred">Dishes</span>
           </h2>
           <div className="w-20 h-1 bg-indiangold mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-700">
+          <p className="max-w-2xl mx-auto text-indianbrown">
             Explore our chef's selection of the finest Indian cuisine, prepared with authentic
             recipes and the freshest ingredients to delight your taste buds.
           </p>
@@ -84,6 +84,19 @@ const MenuHighlights = () => {
           <Link to="/order-online">
             <Button className="bg-indiangold hover:bg-indiangold/90 text-white mx-2">
               Order Online <ArrowUpRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+        
+        {/* Banquet Hall Promo */}
+        <div className="mt-12 p-6 banquet-highlight rounded-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="mb-4 md:mb-0 md:mr-4">
+            <h3 className="text-lg font-semibold text-indianbrown">Hosting an event?</h3>
+            <p className="text-sm text-indianbrown/80">Book our elegant banquet hall for your special occasions</p>
+          </div>
+          <Link to="/banquet">
+            <Button className="bg-indianbrown hover:bg-indianbrown/90 text-white whitespace-nowrap">
+              <Building2 className="mr-2 h-4 w-4" /> Explore Banquet Hall
             </Button>
           </Link>
         </div>

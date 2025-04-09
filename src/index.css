@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 0 75% 42%;
+    --primary: 0 95% 38%;
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 43 74% 49%;
+    --secondary: 28 63% 50%;
     --secondary-foreground: 26 83.3% 14.1%;
 
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 20 100% 55.3%;
+    --accent: 20 90% 47%;
     --accent-foreground: 60 9.1% 97.8%;
 
     --destructive: 0 84.2% 60.2%;
@@ -48,16 +48,16 @@
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
 
-    --primary: 0 75% 42%;
+    --primary: 0 95% 38%;
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 43 74% 49%;
+    --secondary: 28 63% 50%;
     --secondary-foreground: 26 83.3% 14.1%;
 
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
 
-    --accent: 20 100% 55.3%;
+    --accent: 20 90% 47%;
     --accent-foreground: 60 9.1% 97.8%;
 
     --destructive: 0 62.8% 30.6%;
@@ -84,5 +84,10 @@
 }
 
 .spice-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CD7B2F' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Add a new class for banquet hall highlight */
+.banquet-highlight {
+  @apply bg-gradient-to-r from-indiangold/10 to-indiangold/5 border-l-4 border-indiangold shadow-md;
 }

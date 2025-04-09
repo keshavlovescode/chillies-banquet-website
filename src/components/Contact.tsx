@@ -1,6 +1,6 @@
 
 import React from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -43,16 +43,6 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <Mail className="mr-3 h-5 w-5 text-indianred shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-medium text-indiancharcoal">Email Address</h4>
-                    <p className="text-gray-600">
-                      <a href="mailto:info@indianchillies.com" className="hover:text-indianred transition-colors">info@indianchillies.com</a>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
                   <Clock className="mr-3 h-5 w-5 text-indianred shrink-0 mt-1" />
                   <div>
                     <h4 className="font-medium text-indiancharcoal">Opening Hours</h4>
@@ -65,7 +55,7 @@ const Contact = () => {
           
           <div>
             <img 
-              src="/lovable-uploads/8ee8f53d-d6a3-46b0-bfc2-cafc185ba919.png" 
+              src="/lovable-uploads/84c153ab-5592-47a7-90bb-d113716b8c4a.png" 
               alt="Indian Chillies Restaurant Front" 
               className="rounded-lg shadow-md mb-4 w-full h-auto"
             />

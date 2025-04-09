@@ -12,7 +12,16 @@ const ContactFormAndMap = () => {
           <ContactForm />
 
           {/* Map and Address */}
-          <LocationMap />
+          <div>
+            <LocationMap />
+            <div className="mt-6">
+              <img 
+                src="/lovable-uploads/f1a1fbaa-d8d7-432c-8699-531871093a2f.png" 
+                alt="Indian Chillies Restaurant" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

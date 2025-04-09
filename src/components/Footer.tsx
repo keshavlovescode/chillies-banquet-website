@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Facebook, Instagram, Twitter, MapPin, Phone, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,10 +18,6 @@ const Footer = () => {
             <p className="mb-2 flex items-center">
               <Phone className="mr-2 h-5 w-5 text-indianred" />
               <a href="tel:+919997761232" className="hover:text-indianred transition-colors">+91 9997761232</a>
-            </p>
-            <p className="mb-2 flex items-center">
-              <Mail className="mr-2 h-5 w-5 text-indianred" />
-              <a href="mailto:info@indianchillies.com" className="hover:text-indianred transition-colors">info@indianchillies.com</a>
             </p>
             <p className="mb-2 flex items-center">
               <Clock className="mr-2 h-5 w-5 text-indianred" />

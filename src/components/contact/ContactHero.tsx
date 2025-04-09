@@ -8,7 +8,7 @@ const ContactHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3')", 
+          backgroundImage: "url('/lovable-uploads/ac3cd5ce-4a6c-4202-afb2-f9c2cf84657e.png')", 
           filter: "brightness(0.3)"
         }}
       ></div>

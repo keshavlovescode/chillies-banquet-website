@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Utensils, ChefHat, Menu, X, ShoppingCart } from "lucide-react";
+import { Utensils, Menu, X, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -12,7 +12,11 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <ChefHat className="h-8 w-8 text-indianred" />
+          <img 
+            src="/lovable-uploads/b93cb0f4-887d-45c9-bc33-118b0511eb5b.png" 
+            alt="Indian Chillies Logo" 
+            className="h-12 w-auto"
+          />
           <div>
             <h1 className="font-playfair text-2xl font-bold text-indianred">Indian Chillies</h1>
             <p className="text-xs text-indiancharcoal/70 -mt-1">Restaurant & Banquet Hall · FSSAI: 22721106000072</p>

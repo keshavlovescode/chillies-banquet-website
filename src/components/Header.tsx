@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, ShoppingCart, Building2 } from "lucide-react";
+import { Menu, X, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -36,9 +36,6 @@ const Header = () => {
           </Link>
           <Link to="/about" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">About</Link>
           <Link to="/contact" className="font-medium text-indiancharcoal hover:text-indianred transition-colors">Contact</Link>
-          <Link to="/order-online" className="font-medium text-indiancharcoal hover:text-indianred transition-colors flex items-center">
-            <ShoppingCart className="mr-1 h-4 w-4" /> Order Online
-          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -94,13 +91,6 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </Link>
-            <Link 
-              to="/order-online" 
-              className="py-3 font-medium text-indiancharcoal hover:text-indianred transition-colors flex items-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <ShoppingCart className="mr-1 h-4 w-4" /> Order Online
             </Link>
           </div>
         </div>

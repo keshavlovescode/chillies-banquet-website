@@ -19,5 +19,12 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Allow social media bots to crawl our social links
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: Instagrambot
+Allow: /
+
 # Prevent crawling of specific files or directories if needed
 # Disallow: /private/

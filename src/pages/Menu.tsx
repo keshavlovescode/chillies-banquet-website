@@ -2,9 +2,8 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const categories = [
   { id: "breakfast", name: "Breakfast" },
@@ -213,33 +212,13 @@ const Menu = () => {
             })}
 
             <div className="text-center mt-12 space-y-4">
-              <p className="text-gray-600">This is just a sample of our extensive menu. For our complete menu and online ordering:</p>
+              <p className="text-gray-600">This is just a sample of our extensive menu. For our complete menu:</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button className="bg-indianred hover:bg-indianred/90 text-white">
                   Download PDF Menu
                 </Button>
-                <Link to="/order-online">
-                  <Button className="bg-indiangold hover:bg-indiangold/90 text-white">
-                    Order Online <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Reservation CTA */}
-        <div className="bg-indiancharcoal py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-playfair font-bold text-white mb-4">
-              Enjoy Our <span className="text-indiangold">Delicious Food</span>
-            </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Make a reservation to experience our authentic Indian cuisine in a warm and welcoming atmosphere.
-            </p>
-            <Button className="bg-indianred hover:bg-indianred/90 text-white">
-              Make a Reservation
-            </Button>
           </div>
         </div>
       </main>

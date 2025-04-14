@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight, Building2 } from "lucide-react";
+import { Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const menuItems = [
@@ -79,11 +79,6 @@ const MenuHighlights = () => {
           <Link to="/menu">
             <Button className="bg-indianred hover:bg-indianred/90 text-white mx-2">
               View Complete Menu
-            </Button>
-          </Link>
-          <Link to="/order-online">
-            <Button className="bg-indiangold hover:bg-indiangold/90 text-white mx-2">
-              Order Online <ArrowUpRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>
         </div>

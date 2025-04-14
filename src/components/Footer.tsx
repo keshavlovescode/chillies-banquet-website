@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Banquet Hall CTA */}
         <div className="mb-12 p-6 bg-gradient-to-r from-indiangold/30 to-indiangold/10 rounded-lg max-w-4xl mx-auto text-center">
           <Building2 className="h-12 w-12 text-indiangold mx-auto mb-2" />
-          <h3 className="text-2xl font-playfair font-bold text-white mb-2">Book Our Banquet Hall</h3>
+          <h3 className="text-2xl font-playfair font-bold text-white mb-2">Our Elegant Banquet Hall</h3>
           <p className="mb-4 text-white/80">Perfect for weddings, corporate events, birthday parties, and special occasions.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/banquet" className="bg-indiangold hover:bg-indiangold/90 text-white px-4 py-2 rounded-md">

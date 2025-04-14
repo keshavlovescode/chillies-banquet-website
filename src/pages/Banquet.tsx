@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Calendar, Cake, Bell, Utensils, Users, Music, Image, PartyPopper } from "lucide-react";
+import { Calendar, Cake, Bell, Utensils, Users, Music, Image, PartyPopper, Phone } from "lucide-react";
 
 const features = [
   {
@@ -129,12 +129,9 @@ const Banquet = () => {
                   detail meets your vision and exceeds your expectations.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button className="bg-indianred hover:bg-indianred/90 text-white">
-                    Book the Venue
-                  </Button>
-                  <Button variant="outline" className="border-indiancharcoal text-indiancharcoal hover:bg-indiancharcoal/10">
-                    Call for Details
-                  </Button>
+                  <a href="tel:+919997761232" className="inline-flex items-center justify-center gap-2 rounded-md bg-indianred text-white hover:bg-indianred/90 px-4 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                    <Phone className="h-5 w-5" /> Call for Details: +91 9997761232
+                  </a>
                 </div>
               </div>
               
@@ -223,9 +220,9 @@ const Banquet = () => {
                     <div>
                       <h3 className="text-2xl font-playfair font-semibold text-indiancharcoal mb-4">{event.title}</h3>
                       <p className="text-gray-700 mb-6">{event.description}</p>
-                      <Button className="bg-indianred hover:bg-indianred/90 text-white">
-                        Inquire About {event.title}
-                      </Button>
+                      <a href="tel:+919997761232" className="inline-flex items-center justify-center gap-2 rounded-md bg-indianred text-white hover:bg-indianred/90 px-4 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                        <Phone className="h-5 w-5" /> Call to Inquire: +91 9997761232
+                      </a>
                     </div>
                   </div>
                 </TabsContent>
@@ -272,18 +269,15 @@ const Banquet = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-playfair font-bold text-white mb-4">
-                Ready to Book Our <span className="text-indiangold">Banquet Hall</span>?
+                Contact Us About Our <span className="text-indiangold">Banquet Hall</span>
               </h2>
               <p className="text-white/80 mb-8">
-                Contact us today at <span className="text-indiangold">+91 999-776-1232</span> to check availability and discuss your event requirements.
+                Call us today at <span className="text-indiangold">+91 999-776-1232</span> to discuss your event requirements.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button className="bg-indianred hover:bg-indianred/90 text-white">
-                  Book Now
-                </Button>
-                <Button variant="outline" className="border-indiangold text-indiangold hover:bg-indiangold/10">
-                  Request Information
-                </Button>
+                <a href="tel:+919997761232" className="inline-flex items-center justify-center gap-2 rounded-md bg-indiangold text-white hover:bg-indiangold/90 px-6 py-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-lg">
+                  <Phone className="h-5 w-5" /> Call Now: +91 9997761232
+                </a>
               </div>
             </div>
           </div>

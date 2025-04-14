@@ -87,7 +87,7 @@ const BanquetHall = () => {
               <div className="mt-8">
                 <Link to="/banquet">
                   <Button className="w-full bg-indianred hover:bg-indianred/90 text-white">
-                    <Building2 className="mr-2 h-5 w-5" /> Book the Banquet Hall
+                    <Building2 className="mr-2 h-5 w-5" /> Learn More About Our Banquet Hall
                   </Button>
                 </Link>
               </div>

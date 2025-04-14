@@ -6,7 +6,6 @@ import About from "@/components/About";
 import MenuHighlights from "@/components/MenuHighlights";
 import BanquetHall from "@/components/BanquetHall";
 import Testimonials from "@/components/Testimonials";
-import Reservation from "@/components/Reservation";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -14,6 +13,13 @@ const Index = () => {
   useEffect(() => {
     // Scroll to top when page loads
     window.scrollTo(0, 0);
+    
+    // Set page title and meta description for SEO
+    document.title = "Indian Chillies - Authentic Indian Restaurant & Banquet Hall in Modinagar";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Experience authentic North Indian cuisine at Indian Chillies Restaurant. Book our elegant banquet hall for weddings and events in Modinagar. Call +919997761232 for reservations.');
+    }
   }, []);
 
   return (
@@ -25,7 +31,6 @@ const Index = () => {
         <MenuHighlights />
         <BanquetHall />
         <Testimonials />
-        <Reservation />
         <Contact />
       </main>
       <Footer />

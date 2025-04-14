@@ -1,7 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { Utensils, Building2 } from "lucide-react";
+import { Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -36,12 +36,9 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-indianred hover:bg-indianred/90 text-white text-lg px-6 py-6">
-              <Utensils className="mr-2 h-5 w-5" /> Reserve a Table
-            </Button>
             <Link to="/banquet">
               <Button variant="outline" className="border-indiangold text-indiangold hover:bg-indiangold/10 text-lg px-6 py-6">
-                <Building2 className="mr-2 h-5 w-5" /> Book Banquet Hall
+                <Building2 className="mr-2 h-5 w-5" /> Explore Banquet Hall
               </Button>
             </Link>
           </div>

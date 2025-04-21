@@ -20,6 +20,22 @@ const Index = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Experience authentic North Indian cuisine at Indian Chillies Restaurant. Book our elegant banquet hall for weddings and events in Modinagar. Call +919997761232 for reservations.');
     }
+    
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId) {
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
   }, []);
 
   return (

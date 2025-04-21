@@ -39,7 +39,7 @@ const MenuHighlights = () => {
     <section className="py-20 bg-indiancream spice-pattern" id="menu-highlights">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-indiancharcoal mb-4">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-indiancharcoal mb-4 animate-fade-up">
             Our Signature <span className="text-indianred">Dishes</span>
           </h2>
           <div className="w-20 h-1 bg-indiangold mx-auto mb-6"></div>
@@ -51,20 +51,24 @@ const MenuHighlights = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {menuItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 overflow-hidden relative">
+            <Card 
+              key={index} 
+              className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform duration-300"
+            >
+              <div className="h-48 overflow-hidden relative group">
                 <img 
                   src={item.image} 
                   alt={item.name} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {item.bestseller && (
                   <div className="absolute top-2 right-2 bg-indiangold text-white text-xs px-2 py-1 rounded-full">
                     Bestseller
                   </div>
                 )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <CardContent className="p-5">
+              <CardContent className="p-5 bg-white">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="font-playfair text-xl font-semibold text-indiancharcoal">{item.name}</h3>
                   <span className="text-indianred font-semibold">{item.price}</span>
@@ -77,7 +81,7 @@ const MenuHighlights = () => {
 
         <div className="text-center mt-12">
           <Link to="/menu">
-            <Button className="bg-indianred hover:bg-indianred/90 text-white mx-2">
+            <Button className="bg-indianred hover:bg-indianred/90 text-white mx-2 transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg">
               View Complete Menu
             </Button>
           </Link>
@@ -90,7 +94,7 @@ const MenuHighlights = () => {
             <p className="text-sm text-indianbrown/80">Book our elegant banquet hall for your special occasions</p>
           </div>
           <Link to="/banquet">
-            <Button className="bg-indianbrown hover:bg-indianbrown/90 text-white whitespace-nowrap">
+            <Button className="bg-indianbrown hover:bg-indianbrown/90 text-white whitespace-nowrap transform hover:scale-105 transition-transform duration-300">
               <Building2 className="mr-2 h-4 w-4" /> Explore Banquet Hall
             </Button>
           </Link>

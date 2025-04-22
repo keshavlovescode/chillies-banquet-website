@@ -14,12 +14,6 @@ const testimonials = [
     quote: "Very good place for family function or individual gathering.. very nice staff and food quality",
     avatar: "/lovable-uploads/5e874262-3d39-48fc-b13d-fc80368a5c02.png",
   },
-  {
-    name: "Priya Patel",
-    role: "Corporate Event",
-    quote: "We hosted our company's annual dinner at Indian Chillies and everything was perfect. The staff was attentive, and the customized menu was a big hit with our team.",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-  },
 ];
 
 const Testimonials = () => {
@@ -36,27 +30,17 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-none shadow-lg">
               <CardContent className="p-8">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-full mb-4">
-                    {index < 2 ? (
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.name} 
-                        className="w-full h-auto object-cover rounded-lg"
-                      />
-                    ) : (
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-indiangold mx-auto">
-                        <img 
-                          src={testimonial.avatar} 
-                          alt={testimonial.name} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name} 
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
                   </div>
                   <div className="mb-4">
                     {[...Array(5)].map((_, i) => (

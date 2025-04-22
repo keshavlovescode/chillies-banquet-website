@@ -9,28 +9,28 @@ const menuItems = [
     name: "Kadai Paneer",
     description: "Kadai paneer is a spicy, warming, flavorful and super delicious dish made by cooking paneer in a fragrant gravy.",
     price: "₹280",
-    image: "/lovable-uploads/d8d9a203-c06f-4061-a0c3-d93decc64208.png",
+    image: "https://source.unsplash.com/featured/?kadai,paneer,indian,food",
     bestseller: true,
   },
   {
     name: "Dal Makhani",
     description: "The typical vegetables included in mixed vegetable are cauliflower, carrots, cabbage, french beans.",
     price: "₹190",
-    image: "/lovable-uploads/e6a9c621-d0e1-448e-ae17-c4267883ad53.png",
+    image: "https://source.unsplash.com/featured/?dal,makhani,indian,food",
     bestseller: true,
   },
   {
     name: "Special Thali",
     description: "Dal Makhani+Shahi Paneer+Mixed Veg+Butter Naan+Laccha Paratha+Salad+Raita+Rice+Gulab Jamun",
     price: "₹299",
-    image: "/lovable-uploads/f3b87dd9-18cf-4024-95a3-94d14acd0d1d.png",
+    image: "https://source.unsplash.com/featured/?thali,indian,food",
     bestseller: true,
   },
   {
     name: "Veg Biryani",
     description: "A classic dish made by layering rice over slow cooked mixed veg gravy.",
     price: "₹220",
-    image: "/lovable-uploads/5e874262-3d39-48fc-b13d-fc80368a5c02.png",
+    image: "https://source.unsplash.com/featured/?biryani,indian,food",
   },
 ];
 

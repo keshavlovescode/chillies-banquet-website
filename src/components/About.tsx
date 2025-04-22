@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -29,22 +30,22 @@ const About = () => {
           </div>
           
           {/* Image Grid */}
-          <div className="order-1 md:order-2 space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="order-1 md:order-2 space-y-6">
+            <div className="grid grid-cols-2 gap-6">
               <div className="relative">
                 <div className="absolute -top-2 -left-2 w-full h-full border-2 border-indiangold rounded-lg"></div>
                 <img 
                   src="/lovable-uploads/989568fa-9844-47a0-8c29-e9d57129717e.png" 
                   alt="Indian Chillies Restaurant Interior" 
-                  className="w-full h-48 object-cover rounded-lg shadow-xl"
+                  className="w-full h-64 object-cover rounded-lg shadow-xl"
                 />
               </div>
-              <div className="relative mt-8">
+              <div className="relative mt-12">
                 <div className="absolute -top-2 -left-2 w-full h-full border-2 border-indianred rounded-lg"></div>
                 <img 
                   src="/lovable-uploads/be746985-9516-4618-a195-4c78cfa36f65.png" 
                   alt="Restaurant Dining Area" 
-                  className="w-full h-48 object-cover rounded-lg shadow-xl"
+                  className="w-full h-64 object-cover rounded-lg shadow-xl"
                 />
               </div>
             </div>
@@ -55,7 +56,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/e35077d2-f8b8-415d-9635-86d739be28f6.png" 
                 alt="Restaurant Front View" 
-                className="w-full h-64 object-cover rounded-lg shadow-xl"
+                className="w-full h-80 object-cover rounded-lg shadow-xl"
               />
             </div>
           </div>

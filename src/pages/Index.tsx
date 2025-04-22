@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import MenuHighlights from "@/components/MenuHighlights";
+import BanquetHighlights from "@/components/BanquetHighlights";
 import BanquetHall from "@/components/BanquetHall";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -45,6 +46,7 @@ const Index = () => {
         <Hero />
         <About />
         <MenuHighlights />
+        <BanquetHighlights />
         <BanquetHall />
         <Testimonials />
         <Contact />

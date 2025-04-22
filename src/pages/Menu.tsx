@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -111,7 +110,7 @@ const Menu = () => {
             </p>
           </div>
         </div>
-
+        
         {/* Menu Categories Tabs */}
         <div className="bg-indiancream py-8">
           <div className="container mx-auto px-4">
@@ -212,12 +211,7 @@ const Menu = () => {
             })}
 
             <div className="text-center mt-12 space-y-4">
-              <p className="text-gray-600">This is just a sample of our extensive menu. For our complete menu:</p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button className="bg-indianred hover:bg-indianred/90 text-white">
-                  Download PDF Menu
-                </Button>
-              </div>
+              <p className="text-gray-600">This is just a sample of our extensive menu. </p>
             </div>
           </div>
         </div>

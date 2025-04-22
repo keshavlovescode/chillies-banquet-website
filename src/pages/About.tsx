@@ -1,9 +1,8 @@
-
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ChefHat, Star, History, Users } from "lucide-react";
+import { History, ChefHat, Star, Users } from "lucide-react";
 
 const aboutSections = [
   {
@@ -25,27 +24,6 @@ const aboutSections = [
     icon: <Users className="h-10 w-10 text-indiangold" />,
     title: "Our Team",
     description: "Our dedicated team of chefs, servers, and event planners work together to ensure every visit to Indian Chillies is memorable. With a passion for hospitality and attention to detail, our staff is the heart of our restaurant.",
-  },
-];
-
-const chefs = [
-  {
-    name: "Rajiv Sharma",
-    title: "Executive Chef",
-    bio: "With over 20 years of experience in Indian cuisine, Chef Rajiv brings authentic flavors and techniques from various regions of India to Indian Chillies.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    name: "Priya Patel",
-    title: "Pastry Chef",
-    bio: "Chef Priya specializes in traditional Indian sweets and desserts, creating mouthwatering treats that perfectly complement our savory dishes.",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
-  },
-  {
-    name: "Arjun Singh",
-    title: "Tandoor Specialist",
-    bio: "Chef Arjun is a master of the tandoor, expertly preparing our tandoori specialties with perfect spice blends and cooking techniques.",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
   },
 ];
 
@@ -189,40 +167,6 @@ const About = () => {
                 <div key={index} className="border border-gray-100 p-6 rounded-lg shadow-sm">
                   <h3 className="text-xl font-playfair font-semibold text-indiancharcoal mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Meet Our Chefs */}
-        <section className="py-16 bg-indiancream">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-playfair font-bold text-indiancharcoal mb-4">
-                Meet Our <span className="text-indianred">Chefs</span>
-              </h2>
-              <div className="w-20 h-1 bg-indiangold mx-auto mb-6"></div>
-              <p className="max-w-2xl mx-auto text-gray-700">
-                Our talented culinary team brings years of experience and passion to every dish.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {chefs.map((chef, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="h-64 overflow-hidden">
-                    <img 
-                      src={chef.image} 
-                      alt={chef.name} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-playfair font-semibold text-indiancharcoal mb-1">{chef.name}</h3>
-                    <p className="text-indianred mb-4">{chef.title}</p>
-                    <p className="text-gray-600">{chef.bio}</p>
-                  </div>
                 </div>
               ))}
             </div>

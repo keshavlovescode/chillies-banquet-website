@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Calendar, Cake, Bell, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -45,7 +44,7 @@ const BanquetHall = () => {
             <div className="col-span-2">
               <img 
                 src="/lovable-uploads/67cc8a92-84f6-41a4-b32c-1a93a34e8088.png" 
-                alt="Banquet Hall" 
+                alt="Banquet Hall Main" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
             </div>

@@ -15,6 +15,21 @@ const Hero = () => {
         }}
       ></div>
       
+      {/* Floating images for visual interest */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <img 
+          src="/lovable-uploads/d467db32-2a71-42c3-904d-376c7454bb46.png"
+          alt="Decorative Food 1"
+          className="absolute -right-20 top-20 w-64 h-64 object-cover rounded-full opacity-30 animate-float"
+        />
+        <img 
+          src="/lovable-uploads/8ee8f53d-d6a3-46b0-bfc2-cafc185ba919.png"
+          alt="Decorative Food 2"
+          className="absolute -left-20 bottom-40 w-48 h-48 object-cover rounded-full opacity-30 animate-float"
+          style={{ animationDelay: "1s" }}
+        />
+      </div>
+      
       {/* Spice pattern overlay */}
       <div className="absolute inset-0 spice-pattern opacity-30"></div>
       

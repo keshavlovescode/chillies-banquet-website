@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -29,18 +28,35 @@ const About = () => {
             </Button>
           </div>
           
-          {/* Image */}
-          <div className="order-1 md:order-2">
+          {/* Image Grid */}
+          <div className="order-1 md:order-2 space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <div className="absolute -top-2 -left-2 w-full h-full border-2 border-indiangold rounded-lg"></div>
+                <img 
+                  src="/lovable-uploads/989568fa-9844-47a0-8c29-e9d57129717e.png" 
+                  alt="Indian Chillies Restaurant Interior" 
+                  className="w-full h-48 object-cover rounded-lg shadow-xl"
+                />
+              </div>
+              <div className="relative mt-8">
+                <div className="absolute -top-2 -left-2 w-full h-full border-2 border-indianred rounded-lg"></div>
+                <img 
+                  src="/lovable-uploads/be746985-9516-4618-a195-4c78cfa36f65.png" 
+                  alt="Restaurant Dining Area" 
+                  className="w-full h-48 object-cover rounded-lg shadow-xl"
+                />
+              </div>
+            </div>
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-indiangold rounded-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                alt="Indian Chillies Restaurant" 
-                className="w-full h-[400px] object-cover rounded-lg shadow-xl"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-indianred text-white p-4 rounded shadow-lg">
+              <div className="absolute -bottom-4 -right-4 bg-indianred text-white p-4 rounded shadow-lg z-10">
                 <p className="font-playfair text-xl">Since 2005</p>
               </div>
+              <img 
+                src="/lovable-uploads/e35077d2-f8b8-415d-9635-86d739be28f6.png" 
+                alt="Restaurant Front View" 
+                className="w-full h-64 object-cover rounded-lg shadow-xl"
+              />
             </div>
           </div>
         </div>
